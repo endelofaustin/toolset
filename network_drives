@@ -1,0 +1,25 @@
+import subprocess
+
+
+############################
+## Mapping Network Drives ##
+############################
+
+
+user_name = input('what is your username?: ')
+import subprocess
+class NetworkDrives:
+
+    def delete_mappings():
+        map_delete = subprocess.run(r'net use F: /DELETE', shell=True)
+        map_delete2 = subprocess.run(r'net use G: /DELETE', shell =True)
+        map_delete3 = subprocess.run(r' net use H: /DELETE', shell=True)
+
+    def connect_drives():
+        net_use1 = subprocess.run(r'net use F: \\alpha\public')
+        net_use2 = subprocess.run(r'net use G: \\alpha\lol')
+        net_use3 = subprocess.run(rf'net use H: \\alpha\users\users-all\{user_name}')
+
+    delete_mappings()
+    connect_drives()
+
